@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <link rel="stylesheet" th:href="@{/css/question.css}" />
+
+</head>
+
+
+<body>
+<div>Bienvenue, <span th:text="${quizForm.name}">Name</span>!</div>
+
+
+<h1 th:text="${question.questionText}">Question Text</h1>
+
+<form th:action="@{/answer/{index}(index=${index})}" method="post">
+
+
+    <div th:each="option : ${question.options}">
+
+        <input type="radio" th:id="${option.key}" th:name="answer" th:value="${option.key}">    <!-- fait référence à la clé de chaque élément de la liste-->
+        <label th:for="${option.key}" th:text="${option.value}">Option</label><br>
+    </div>
+    <button type="submit" class="btn-start">Question suivante</button>
+</form>
+</body>
+
+
+</html>

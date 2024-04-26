@@ -1,0 +1,38 @@
+body {
+    position: absolute;
+    inset: 0;
+    width: 600px;
+    height: 200px;
+    margin: auto;
+    background-color:#0396A6;
+
+    font-family: "American Typewriter,serif";
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+thead {
+    background-color: #04BFAD;
+}
+tbody tr:nth-child(odd) {
+    background-color: #0396A6;
+}
+
+
+.btn-start {
+    background-color: #F28963;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 20px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <link rel="stylesheet" th:href="@{/css/result.css}" />
+    <title>Résultat du quiz</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div>Bienvenue, <span th:text="${quizForm.name}">Name</span>!</div>
+<h1>Les tests sont terminés!</h1>
+<h2>Votre note: <span th:text="${score}"></span> sur 3</h2>
+
+<div>
+    <h2>Tous les résultats:</h2>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Score</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="result : ${allResults}">
+            <td th:text="${result.split(' Result ')[0]}">Nom</td>
+            <td th:text="${result.split(' Result ')[1]}">Score</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--<a href="/">A réessayer !</a>-->
+
+<a href="/">
+    <button type="submit" class="btn-start">Essayez encore une fois </button>
+</a>
+
+
+</body>
+</html>

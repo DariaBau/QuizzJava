@@ -1,0 +1,38 @@
+body {
+    position: absolute;
+    inset: 0;
+    width: 400px;
+    height: 200px;
+    margin: auto;
+    background-color:#04BFAD;
+
+    font-family: "American Typewriter,serif";
+
+}
+
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid  #ffffff;
+
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.btn-start {
+    background-color: #F28963;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+div {
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+}
